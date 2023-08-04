@@ -1,0 +1,1088 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Karla", sans-serif;
+}
+
+#dropdown {
+  display: none;
+}
+
+#hamburger {
+  display: none;
+}
+
+#close {
+  display: none;
+}
+
+header {
+  background-color: white;
+  padding: 0 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+
+  & .logo {
+    width: 40%;
+  }
+
+  & .navbar {
+    width: 60%;
+  }
+
+  & ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & li {
+      display: inline-block;
+      font-size: 1rem;
+
+      &:nth-child(4) {
+        color: black;
+
+        &:hover {
+          background-color: hsl(270, 9%, 17%);
+          cursor: pointer;
+
+          & a {
+            color: white;
+          }
+        }
+      }
+
+      & a {
+        text-decoration: none;
+        color: hsl(273, 4%, 51%);
+        display: inline-block;
+        font-weight: 700;
+
+        &:hover {
+          color: hsl(256, 26%, 20%);
+          cursor: pointer;
+        }
+      }
+
+      &:last-child {
+        border: 2px solid hsl(270, 9%, 17%);
+        padding: 0.7rem 2rem;
+
+        a {
+          color: hsl(270, 9%, 17%);
+        }
+      }
+    }
+  }
+}
+
+.first {
+  background-image: url(./images/bg-pattern-intro-left-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: left -5% center;
+}
+
+.main {
+  margin: auto;
+  display: flex;
+  gap: 3rem;
+  padding: 5rem 10vw 0 10vw;
+  background-color: hsl(256, 26%, 20%);
+  height: 80vh;
+  background-image: url(./images/bg-pattern-intro-right-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: left 100% center;
+
+  & .text {
+    width: 40vw;
+    color: white;
+
+    & .line {
+      width: 10rem;
+      height: 1px;
+      background-color: white;
+    }
+
+    & h1 {
+      font-size: 5rem;
+      line-height: 5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-family: "DM Serif Display", serif;
+    }
+
+    & p {
+      margin-bottom: 3rem;
+      line-height: 1.7rem;
+      color: #ccc;
+    }
+
+    & a {
+      text-decoration: none;
+      color: white;
+      border: 2px solid white;
+      padding: 0.7rem 2rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+
+      &:hover {
+        background-color: white;
+        color: hsl(256, 26%, 20%);
+      }
+    }
+  }
+
+  & .image {
+    width: 40vw;
+
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+.othermain {
+  margin-top: 15rem;
+  background-color: white;
+  padding: 0 10vw;
+
+  & .line {
+    width: 10rem;
+    height: 1px;
+    background-color: hsl(273, 4%, 51%);
+    margin-bottom: 2rem;
+  }
+
+  & h2 {
+    font-size: 5rem;
+    line-height: 5rem;
+    margin-bottom: 4rem;
+    font-family: "DM Serif Display", serif;
+  }
+
+  & img {
+    width: 6rem;
+  }
+
+  & .grid {
+    display: grid;
+    grid-template-columns: 25vw 25vw 25vw;
+    gap: 1.5rem;
+
+    & .card1,
+    .card2,
+    .card3 {
+      display: flex;
+      flex-direction: column;
+      height: 18rem;
+
+      & h3 {
+        font-size: 2rem;
+        color: hsl(270, 9%, 17%);
+        font-family: "DM Serif Display", serif;
+        margin: 2rem 0;
+      }
+
+      & p {
+        line-height: 1.5rem;
+        color: #aaa;
+      }
+    }
+  }
+}
+
+.second {
+  width: 80vw;
+  background-color: hsl(256, 26%, 20%);
+  margin: auto;
+  margin-top: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 5rem;
+  margin-bottom: 8rem;
+  background-image: url(./images/bg-pattern-how-we-work-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left 100% center;
+
+  & h2 {
+    font-size: 4rem;
+    line-height: 4rem;
+    color: white;
+    width: 60%;
+    font-family: "DM Serif Display", serif;
+  }
+
+  & a {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 0.7rem 2rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    &:hover {
+      background-color: white;
+      color: hsl(256, 26%, 20%);
+    }
+  }
+}
+
+footer {
+  background-color: hsl(0, 0%, 98%);
+  background-image: url(./images/bg-pattern-footer-desktop.svg);
+  background-repeat: no-repeat;
+
+  & .ftop {
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+    border-bottom: 1px solid hsl(273, 4%, 51%);
+
+    & i {
+      margin-right: 1rem;
+      color: hsl(273, 4%, 51%);
+
+      &:hover {
+        color: hsl(256, 26%, 20%);
+        cursor: pointer;
+      }
+    }
+  }
+
+  & .fbottom {
+    display: flex;
+    width: 80vw;
+    margin: auto;
+    height: 30vh;
+
+    & .flex1,
+    .flex2,
+    .flex3,
+    .flex4 {
+      width: 20vw;
+    }
+
+    & .heading {
+      font-size: 0.8rem;
+      color: hsl(273, 4%, 51%);
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    & ul {
+      list-style-type: none;
+
+      & li {
+        font-size: 0.8rem;
+        margin-top: 1rem;
+
+        & a {
+          text-decoration: none;
+          color: hsl(270, 9%, 17%);
+          font-weight: 700;
+
+          &:hover {
+            text-decoration: underline;
+            text-decoration-color: hsl(270, 9%, 17%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1279px) {
+  .main {
+    margin: auto;
+    display: flex;
+    gap: 3rem;
+    padding: 4rem 10vw 0 10vw;
+    background-color: hsl(256, 26%, 20%);
+    height: 60vh;
+    background-image: url(./images/bg-pattern-intro-right-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left 100% center;
+  }
+}
+
+@media (max-width: 1023px) {
+  header {
+    background-color: white;
+    padding: 0 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+
+    & .logo {
+      width: 42%;
+    }
+
+    & .navbar {
+      width: 58%;
+    }
+  }
+
+  .main {
+    margin: auto;
+    display: flex;
+    gap: 3rem;
+    padding: 5rem 5vw 0 5vw;
+    background-color: hsl(256, 26%, 20%);
+    height: 60vh;
+    background-image: url(./images/bg-pattern-intro-right-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left 100% center;
+
+    & .text {
+      width: 45vw;
+      color: white;
+
+      & h1 {
+        font-size: 4rem;
+        line-height: 4rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-family: "DM Serif Display", serif;
+      }
+    }
+
+    & .image {
+      width: 45vw;
+
+      & img {
+        width: 100%;
+      }
+    }
+  }
+
+  .othermain {
+    margin-top: 15rem;
+    background-color: white;
+    padding: 0 5vw;
+
+    & .line {
+      width: 10rem;
+      height: 1px;
+      background-color: hsl(273, 4%, 51%);
+      margin-bottom: 2rem;
+    }
+
+    & h2 {
+      font-size: 4rem;
+      line-height: 4rem;
+      margin-bottom: 4rem;
+      font-family: "DM Serif Display", serif;
+    }
+
+    & img {
+      width: 6rem;
+    }
+
+    & .grid {
+      display: grid;
+      grid-template-columns: 28.7vw 28.7vw 28.7vw;
+      gap: 1rem;
+
+      & .card1,
+      .card2,
+      .card3 {
+        display: flex;
+        flex-direction: column;
+        height: 18rem;
+
+        & h3 {
+          font-size: 1.7rem;
+          color: hsl(270, 9%, 17%);
+          font-family: "DM Serif Display", serif;
+        }
+      }
+    }
+  }
+
+  .second {
+    width: 90vw;
+    background-color: hsl(256, 26%, 20%);
+    margin: auto;
+    margin-top: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 4rem;
+    margin-bottom: 8rem;
+    background-image: url(./images/bg-pattern-how-we-work-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left 100% center;
+
+    & h2 {
+      font-size: 3rem;
+      line-height: 3rem;
+      color: white;
+      width: 60%;
+      font-family: "DM Serif Display", serif;
+    }
+  }
+
+  footer {
+    background-color: hsl(0, 0%, 98%);
+    background-image: url(./images/bg-pattern-footer-desktop.svg);
+    background-repeat: no-repeat;
+
+    & .ftop {
+      width: 90vw;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 15vh;
+      border-bottom: 1px solid hsl(273, 4%, 51%);
+
+      & img {
+        margin-right: 1rem;
+      }
+    }
+
+    & .fbottom {
+      display: flex;
+      width: 90vw;
+      margin: auto;
+      height: 30vh;
+
+      & .flex1,
+      .flex2,
+      .flex3,
+      .flex4 {
+        width: 22.5vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  header {
+    background-color: white;
+    padding: 0 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+
+    & .logo {
+      width: 30%;
+    }
+
+    & .navbar {
+      width: 70%;
+    }
+    & ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & li {
+        display: inline-block;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    min-height: 100vh;
+  }
+
+  #dropdown {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 5rem);
+    top: 5rem;
+    left: 0;
+    background-color: hsl(270, 9%, 17%);
+    background-image: url(./images/bg-pattern-mobile-nav.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top 100%;
+
+    & .drop ul {
+      height: 80vh;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      & li {
+        display: block;
+        font-size: 1rem;
+        margin-top: 2rem;
+        width: 90%;
+        text-align: center;
+
+        &:nth-child(4) {
+          color: black;
+
+          & > a:hover {
+            background-color: black;
+            color: white;
+          }
+        }
+
+        &:last-child {
+          border: 2px solid white;
+        }
+
+        & a {
+          text-decoration: none;
+          color: white;
+          padding: 0.5rem 1rem;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  #dropdown {
+    display: none;
+  }
+
+  #hamburger {
+    display: block;
+  }
+
+  #close {
+    display: none;
+  }
+
+  header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 5rem;
+
+    & .navbar {
+      display: none;
+    }
+  }
+
+  .first {
+    background-image: none;
+  }
+
+  .main {
+    text-align: center;
+    margin: auto;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+    padding: 0 10vw;
+    background-color: hsl(256, 26%, 20%);
+    height: 100rem;
+    background-image: url(./images/bg-pattern-intro-right-mobile.svg),
+      url(./images/bg-pattern-intro-left-mobile.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 150% right, top 48% left;
+    background-size: 50vw, 70vw;
+
+    & .text {
+      width: 80vw;
+      color: white;
+      order: 2;
+      height: 50%;
+
+      & .line {
+        width: 8rem;
+        height: 1px;
+        background-color: white;
+        display: none;
+      }
+
+      & h1 {
+        font-size: 3.7rem;
+        line-height: 3.5rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      & p {
+        margin-bottom: 3rem;
+        line-height: 1.5rem;
+      }
+
+      & a {
+        text-decoration: none;
+        color: white;
+        border: 2px solid white;
+        font-size: 0.8rem;
+
+        &:hover {
+          background-color: white;
+          color: hsl(256, 26%, 20%);
+        }
+      }
+    }
+
+    & .image {
+      width: 100vw;
+      max-height: 50%;
+      order: 1;
+
+      & img {
+        width: 100%;
+        display: inline-block;
+      }
+    }
+  }
+
+  .othermain {
+    background-color: white;
+    padding: 0 10vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 10rem;
+
+    & .line {
+      width: 12rem;
+      height: 1px;
+      background-color: hsl(273, 4%, 51%);
+      margin-bottom: 2rem;
+    }
+
+    & h2 {
+      font-size: 3.7rem;
+      margin-bottom: 5rem;
+    }
+
+    & img {
+      width: 4rem;
+    }
+
+    & .grid {
+      display: grid;
+      grid-template-columns: 80vw;
+      align-items: center;
+      gap: 4rem;
+      text-align: center;
+
+      & .card1,
+      .card2,
+      .card3 {
+        display: flex;
+        flex-direction: column;
+        height: 15rem;
+        align-items: center;
+
+        & h3 {
+          font-size: 1.8rem;
+        }
+
+        & p {
+          line-height: 1.5rem;
+          color: hsl(273, 4%, 51%);
+        }
+      }
+    }
+  }
+
+  .second {
+    width: 80vw;
+    background-color: hsl(256, 26%, 20%);
+    margin: auto;
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 8rem;
+    background-image: url(./images/bg-pattern-how-we-work-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: left 100% center;
+    text-align: center;
+    padding: 3rem 2rem;
+
+    & h2 {
+      font-size: 2.5rem;
+      color: white;
+      line-height: 3rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      width: 85%;
+    }
+
+    & a {
+      text-decoration: none;
+      color: white;
+      border: 2px solid white;
+      font-size: 0.8rem;
+
+      &:hover {
+        background-color: white;
+        color: hsl(256, 26%, 20%);
+      }
+    }
+  }
+
+  footer {
+    background-color: hsl(0, 0%, 98%);
+    background-image: url(./images/bg-pattern-footer-desktop.svg);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+
+    & .ftop {
+      width: 80vw;
+      margin-top: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 7rem;
+      border-bottom: 1px solid hsl(273, 4%, 51%);
+      padding-bottom: 2rem;
+
+      & img {
+        margin-right: 1rem;
+      }
+    }
+
+    & .fbottom {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 80vw;
+      height: 50rem;
+      margin: auto;
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+      text-align: center;
+
+      & .flex1,
+      .flex2,
+      .flex3,
+      .flex4 {
+        width: 40vw;
+      }
+
+      & .heading {
+        font-size: 0.8rem;
+        color: hsl(273, 4%, 51%);
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      & ul {
+        list-style-type: none;
+
+        & li {
+          font-size: 0.8rem;
+          margin-top: 1rem;
+
+          & a {
+            text-decoration: none;
+            color: hsl(270, 9%, 17%);
+
+            &:hover {
+              text-decoration: underline;
+              text-decoration-color: hsl(270, 9%, 17%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .main {
+    text-align: center;
+    margin: auto;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7rem;
+    padding: 0 5vw;
+    background-color: hsl(256, 26%, 20%);
+    height: 70rem;
+    background-image: url(./images/bg-pattern-intro-right-mobile.svg),
+      url(./images/bg-pattern-intro-left-mobile.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 150% right, top 48% left;
+    background-size: 50vw, 70vw;
+
+    & .text {
+      width: 90vw;
+      color: white;
+      order: 2;
+      height: 50%;
+
+      & .line {
+        width: 8rem;
+        height: 1px;
+        background-color: white;
+        display: none;
+      }
+
+      & h1 {
+        font-size: 3rem;
+        line-height: 3.5rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      & p {
+        margin-bottom: 3rem;
+        line-height: 1.5rem;
+      }
+
+      & a {
+        text-decoration: none;
+        color: white;
+        border: 2px solid white;
+        font-size: 0.8rem;
+
+        &:hover {
+          background-color: white;
+          color: hsl(256, 26%, 20%);
+        }
+      }
+    }
+  }
+
+  .othermain {
+    background-color: white;
+    padding: 0 5vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 10rem;
+
+    & .line {
+      width: 12rem;
+      height: 1px;
+      background-color: hsl(273, 4%, 51%);
+      margin-bottom: 2rem;
+    }
+
+    & h2 {
+      font-size: 3rem;
+      margin-bottom: 5rem;
+    }
+
+    & img {
+      width: 4rem;
+    }
+
+    & .grid {
+      display: grid;
+      grid-template-columns: 90vw;
+      align-items: center;
+      gap: 4rem;
+      text-align: center;
+    }
+  }
+
+  .second {
+    width: 90vw;
+    background-color: hsl(256, 26%, 20%);
+    margin: auto;
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 8rem;
+    background-image: url(./images/bg-pattern-how-we-work-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: left 100% center;
+    text-align: center;
+    padding: 3rem 2rem;
+
+    & h2 {
+      font-size: 2rem;
+      color: white;
+      line-height: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    & a {
+      text-decoration: none;
+      color: white;
+      border: 2px solid white;
+      font-size: 0.8rem;
+
+      &:hover {
+        background-color: white;
+        color: hsl(256, 26%, 20%);
+      }
+    }
+  }
+}
+
+@media (max-width: 1440px) and (min-width: 1025px) and (orientation: landscape) {
+  header {
+    background-color: white;
+    padding: 0 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+
+    & ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & li {
+        display: inline-block;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .main {
+    margin: auto;
+    display: flex;
+    gap: 3rem;
+    padding: 3rem 10vw 0 10vw;
+    background-color: hsl(256, 26%, 20%);
+    height: 40rem;
+    background-image: url(./images/bg-pattern-intro-right-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left 100% center;
+  }
+
+  footer {
+    & .ftop {
+      width: 80vw;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 8rem;
+      border-bottom: 1px solid hsl(273, 4%, 51%);
+    }
+
+    & .fbottom {
+      display: flex;
+      width: 80vw;
+      margin: auto;
+      height: 15rem;
+    }
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) and (orientation: landscape) {
+  header {
+    background-color: white;
+    padding: 0 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+
+    & ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & li {
+        display: inline-block;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .main {
+    margin: auto;
+    display: flex;
+    gap: 3rem;
+    padding: 3rem 10vw 0 10vw;
+    background-color: hsl(256, 26%, 20%);
+    height: 40rem;
+    background-image: url(./images/bg-pattern-intro-right-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left 100% center;
+  }
+
+  footer {
+    & .ftop {
+      width: 80vw;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 8rem;
+      border-bottom: 1px solid hsl(273, 4%, 51%);
+    }
+
+    & .fbottom {
+      display: flex;
+      width: 80vw;
+      margin: auto;
+      height: 15rem;
+    }
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 5rem;
+  }
+
+  #dropdown {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: calc(110vh - 5rem);
+    top: 5rem;
+    left: 0;
+    background-color: hsl(270, 9%, 17%);
+    background-image: url(./images/bg-pattern-mobile-nav.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top 120%;
+  }
+}

@@ -1,0 +1,952 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Karla", sans-serif;
+}
+
+#dropdown {
+  display: none;
+}
+
+#hamburger {
+  display: none;
+}
+
+#close {
+  display: none;
+}
+
+header {
+  background-color: white;
+  padding: 0 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+}
+header .logo {
+  width: 40%;
+}
+header .navbar {
+  width: 60%;
+}
+header ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header ul li {
+  display: inline-block;
+  font-size: 1rem;
+}
+header ul li:nth-child(4) {
+  color: black;
+}
+header ul li:nth-child(4):hover {
+  background-color: hsl(270, 9%, 17%);
+  cursor: pointer;
+}
+header ul li:nth-child(4):hover a {
+  color: white;
+}
+header ul li a {
+  text-decoration: none;
+  color: hsl(273, 4%, 51%);
+  display: inline-block;
+  font-weight: 700;
+}
+header ul li a:hover {
+  color: hsl(256, 26%, 20%);
+  cursor: pointer;
+}
+header ul li:last-child {
+  border: 2px solid hsl(270, 9%, 17%);
+  padding: 0.7rem 2rem;
+}
+header ul li:last-child a {
+  color: hsl(270, 9%, 17%);
+}
+
+.first {
+  background-image: url(./images/bg-pattern-intro-left-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: left -5% center;
+}
+
+.main {
+  margin: auto;
+  display: flex;
+  gap: 3rem;
+  padding: 5rem 10vw 0 10vw;
+  background-color: hsl(256, 26%, 20%);
+  height: 80vh;
+  background-image: url(./images/bg-pattern-intro-right-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: left 100% center;
+}
+.main .text {
+  width: 40vw;
+  color: white;
+}
+.main .text .line {
+  width: 10rem;
+  height: 1px;
+  background-color: white;
+}
+.main .text h1 {
+  font-size: 5rem;
+  line-height: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-family: "DM Serif Display", serif;
+}
+.main .text p {
+  margin-bottom: 3rem;
+  line-height: 1.7rem;
+  color: #ccc;
+}
+.main .text a {
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  padding: 0.7rem 2rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.main .text a:hover {
+  background-color: white;
+  color: hsl(256, 26%, 20%);
+}
+.main .image {
+  width: 40vw;
+}
+.main .image img {
+  width: 100%;
+}
+
+.othermain {
+  margin-top: 15rem;
+  background-color: white;
+  padding: 0 10vw;
+}
+.othermain .line {
+  width: 10rem;
+  height: 1px;
+  background-color: hsl(273, 4%, 51%);
+  margin-bottom: 2rem;
+}
+.othermain h2 {
+  font-size: 5rem;
+  line-height: 5rem;
+  margin-bottom: 4rem;
+  font-family: "DM Serif Display", serif;
+}
+.othermain img {
+  width: 6rem;
+}
+.othermain .grid {
+  display: grid;
+  grid-template-columns: 25vw 25vw 25vw;
+  gap: 1.5rem;
+}
+.othermain .grid .card1,
+.othermain .grid .card2,
+.othermain .grid .card3 {
+  display: flex;
+  flex-direction: column;
+  height: 18rem;
+}
+.othermain .grid .card1 h3,
+.othermain .grid .card2 h3,
+.othermain .grid .card3 h3 {
+  font-size: 2rem;
+  color: hsl(270, 9%, 17%);
+  font-family: "DM Serif Display", serif;
+  margin: 2rem 0;
+}
+.othermain .grid .card1 p,
+.othermain .grid .card2 p,
+.othermain .grid .card3 p {
+  line-height: 1.5rem;
+  color: #aaa;
+}
+
+.second {
+  width: 80vw;
+  background-color: hsl(256, 26%, 20%);
+  margin: auto;
+  margin-top: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 5rem;
+  margin-bottom: 8rem;
+  background-image: url(./images/bg-pattern-how-we-work-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left 100% center;
+}
+.second h2 {
+  font-size: 4rem;
+  line-height: 4rem;
+  color: white;
+  width: 60%;
+  font-family: "DM Serif Display", serif;
+}
+.second a {
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  padding: 0.7rem 2rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.second a:hover {
+  background-color: white;
+  color: hsl(256, 26%, 20%);
+}
+
+footer {
+  background-color: hsl(0, 0%, 98%);
+  background-image: url(./images/bg-pattern-footer-desktop.svg);
+  background-repeat: no-repeat;
+}
+footer .ftop {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+  border-bottom: 1px solid hsl(273, 4%, 51%);
+}
+footer .ftop i {
+  margin-right: 1rem;
+  color: hsl(273, 4%, 51%);
+}
+footer .ftop i:hover {
+  color: hsl(256, 26%, 20%);
+  cursor: pointer;
+}
+footer .fbottom {
+  display: flex;
+  width: 80vw;
+  margin: auto;
+  height: 30vh;
+}
+footer .fbottom .flex1,
+footer .fbottom .flex2,
+footer .fbottom .flex3,
+footer .fbottom .flex4 {
+  width: 20vw;
+}
+footer .fbottom .heading {
+  font-size: 0.8rem;
+  color: hsl(273, 4%, 51%);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+footer .fbottom ul {
+  list-style-type: none;
+}
+footer .fbottom ul li {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+footer .fbottom ul li a {
+  text-decoration: none;
+  color: hsl(270, 9%, 17%);
+  font-weight: 700;
+}
+footer .fbottom ul li a:hover {
+  text-decoration: underline;
+  text-decoration-color: hsl(270, 9%, 17%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1279px) {
+  .main {
+    margin: auto;
+    display: flex;
+    gap: 3rem;
+    padding: 4rem 10vw 0 10vw;
+    background-color: hsl(256, 26%, 20%);
+    height: 60vh;
+    background-image: url(./images/bg-pattern-intro-right-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left 100% center;
+  }
+}
+@media (max-width: 1023px) {
+  header {
+    background-color: white;
+    padding: 0 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+  }
+  header .logo {
+    width: 42%;
+  }
+  header .navbar {
+    width: 58%;
+  }
+  .main {
+    margin: auto;
+    display: flex;
+    gap: 3rem;
+    padding: 5rem 5vw 0 5vw;
+    background-color: hsl(256, 26%, 20%);
+    height: 60vh;
+    background-image: url(./images/bg-pattern-intro-right-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left 100% center;
+  }
+  .main .text {
+    width: 45vw;
+    color: white;
+  }
+  .main .text h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-family: "DM Serif Display", serif;
+  }
+  .main .image {
+    width: 45vw;
+  }
+  .main .image img {
+    width: 100%;
+  }
+  .othermain {
+    margin-top: 15rem;
+    background-color: white;
+    padding: 0 5vw;
+  }
+  .othermain .line {
+    width: 10rem;
+    height: 1px;
+    background-color: hsl(273, 4%, 51%);
+    margin-bottom: 2rem;
+  }
+  .othermain h2 {
+    font-size: 4rem;
+    line-height: 4rem;
+    margin-bottom: 4rem;
+    font-family: "DM Serif Display", serif;
+  }
+  .othermain img {
+    width: 6rem;
+  }
+  .othermain .grid {
+    display: grid;
+    grid-template-columns: 28.7vw 28.7vw 28.7vw;
+    gap: 1rem;
+  }
+  .othermain .grid .card1,
+  .othermain .grid .card2,
+  .othermain .grid .card3 {
+    display: flex;
+    flex-direction: column;
+    height: 18rem;
+  }
+  .othermain .grid .card1 h3,
+  .othermain .grid .card2 h3,
+  .othermain .grid .card3 h3 {
+    font-size: 1.7rem;
+    color: hsl(270, 9%, 17%);
+    font-family: "DM Serif Display", serif;
+  }
+  .second {
+    width: 90vw;
+    background-color: hsl(256, 26%, 20%);
+    margin: auto;
+    margin-top: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 4rem;
+    margin-bottom: 8rem;
+    background-image: url(./images/bg-pattern-how-we-work-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left 100% center;
+  }
+  .second h2 {
+    font-size: 3rem;
+    line-height: 3rem;
+    color: white;
+    width: 60%;
+    font-family: "DM Serif Display", serif;
+  }
+  footer {
+    background-color: hsl(0, 0%, 98%);
+    background-image: url(./images/bg-pattern-footer-desktop.svg);
+    background-repeat: no-repeat;
+  }
+  footer .ftop {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+    border-bottom: 1px solid hsl(273, 4%, 51%);
+  }
+  footer .ftop img {
+    margin-right: 1rem;
+  }
+  footer .fbottom {
+    display: flex;
+    width: 90vw;
+    margin: auto;
+    height: 30vh;
+  }
+  footer .fbottom .flex1,
+  footer .fbottom .flex2,
+  footer .fbottom .flex3,
+  footer .fbottom .flex4 {
+    width: 22.5vw;
+  }
+}
+@media (max-width: 950px) {
+  header {
+    background-color: white;
+    padding: 0 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+  }
+  header .logo {
+    width: 30%;
+  }
+  header .navbar {
+    width: 70%;
+  }
+  header ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header ul li {
+    display: inline-block;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    min-height: 100vh;
+  }
+  #dropdown {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 5rem);
+    top: 5rem;
+    left: 0;
+    background-color: hsl(270, 9%, 17%);
+    background-image: url(./images/bg-pattern-mobile-nav.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top 100%;
+  }
+  #dropdown .drop ul {
+    height: 80vh;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #dropdown .drop ul li {
+    display: block;
+    font-size: 1rem;
+    margin-top: 2rem;
+    width: 90%;
+    text-align: center;
+  }
+  #dropdown .drop ul li:nth-child(4) {
+    color: black;
+  }
+  #dropdown .drop ul li:nth-child(4) > a:hover {
+    background-color: black;
+    color: white;
+  }
+  #dropdown .drop ul li:last-child {
+    border: 2px solid white;
+  }
+  #dropdown .drop ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+  }
+  #dropdown {
+    display: none;
+  }
+  #hamburger {
+    display: block;
+  }
+  #close {
+    display: none;
+  }
+  header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 5rem;
+  }
+  header .navbar {
+    display: none;
+  }
+  .first {
+    background-image: none;
+  }
+  .main {
+    text-align: center;
+    margin: auto;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+    padding: 0 10vw;
+    background-color: hsl(256, 26%, 20%);
+    height: 100rem;
+    background-image: url(./images/bg-pattern-intro-right-mobile.svg), url(./images/bg-pattern-intro-left-mobile.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 150% right, top 48% left;
+    background-size: 50vw, 70vw;
+  }
+  .main .text {
+    width: 80vw;
+    color: white;
+    order: 2;
+    height: 50%;
+  }
+  .main .text .line {
+    width: 8rem;
+    height: 1px;
+    background-color: white;
+    display: none;
+  }
+  .main .text h1 {
+    font-size: 3.7rem;
+    line-height: 3.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .main .text p {
+    margin-bottom: 3rem;
+    line-height: 1.5rem;
+  }
+  .main .text a {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    font-size: 0.8rem;
+  }
+  .main .text a:hover {
+    background-color: white;
+    color: hsl(256, 26%, 20%);
+  }
+  .main .image {
+    width: 100vw;
+    max-height: 50%;
+    order: 1;
+  }
+  .main .image img {
+    width: 100%;
+    display: inline-block;
+  }
+  .othermain {
+    background-color: white;
+    padding: 0 10vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 10rem;
+  }
+  .othermain .line {
+    width: 12rem;
+    height: 1px;
+    background-color: hsl(273, 4%, 51%);
+    margin-bottom: 2rem;
+  }
+  .othermain h2 {
+    font-size: 3.7rem;
+    margin-bottom: 5rem;
+  }
+  .othermain img {
+    width: 4rem;
+  }
+  .othermain .grid {
+    display: grid;
+    grid-template-columns: 80vw;
+    align-items: center;
+    gap: 4rem;
+    text-align: center;
+  }
+  .othermain .grid .card1,
+  .othermain .grid .card2,
+  .othermain .grid .card3 {
+    display: flex;
+    flex-direction: column;
+    height: 15rem;
+    align-items: center;
+  }
+  .othermain .grid .card1 h3,
+  .othermain .grid .card2 h3,
+  .othermain .grid .card3 h3 {
+    font-size: 1.8rem;
+  }
+  .othermain .grid .card1 p,
+  .othermain .grid .card2 p,
+  .othermain .grid .card3 p {
+    line-height: 1.5rem;
+    color: hsl(273, 4%, 51%);
+  }
+  .second {
+    width: 80vw;
+    background-color: hsl(256, 26%, 20%);
+    margin: auto;
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 8rem;
+    background-image: url(./images/bg-pattern-how-we-work-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: left 100% center;
+    text-align: center;
+    padding: 3rem 2rem;
+  }
+  .second h2 {
+    font-size: 2.5rem;
+    color: white;
+    line-height: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 85%;
+  }
+  .second a {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    font-size: 0.8rem;
+  }
+  .second a:hover {
+    background-color: white;
+    color: hsl(256, 26%, 20%);
+  }
+  footer {
+    background-color: hsl(0, 0%, 98%);
+    background-image: url(./images/bg-pattern-footer-desktop.svg);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+  }
+  footer .ftop {
+    width: 80vw;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 7rem;
+    border-bottom: 1px solid hsl(273, 4%, 51%);
+    padding-bottom: 2rem;
+  }
+  footer .ftop img {
+    margin-right: 1rem;
+  }
+  footer .fbottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+    height: 50rem;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  footer .fbottom .flex1,
+  footer .fbottom .flex2,
+  footer .fbottom .flex3,
+  footer .fbottom .flex4 {
+    width: 40vw;
+  }
+  footer .fbottom .heading {
+    font-size: 0.8rem;
+    color: hsl(273, 4%, 51%);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  footer .fbottom ul {
+    list-style-type: none;
+  }
+  footer .fbottom ul li {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+  footer .fbottom ul li a {
+    text-decoration: none;
+    color: hsl(270, 9%, 17%);
+  }
+  footer .fbottom ul li a:hover {
+    text-decoration: underline;
+    text-decoration-color: hsl(270, 9%, 17%);
+  }
+}
+@media (max-width: 500px) {
+  .main {
+    text-align: center;
+    margin: auto;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7rem;
+    padding: 0 5vw;
+    background-color: hsl(256, 26%, 20%);
+    height: 70rem;
+    background-image: url(./images/bg-pattern-intro-right-mobile.svg), url(./images/bg-pattern-intro-left-mobile.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 150% right, top 48% left;
+    background-size: 50vw, 70vw;
+  }
+  .main .text {
+    width: 90vw;
+    color: white;
+    order: 2;
+    height: 50%;
+  }
+  .main .text .line {
+    width: 8rem;
+    height: 1px;
+    background-color: white;
+    display: none;
+  }
+  .main .text h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .main .text p {
+    margin-bottom: 3rem;
+    line-height: 1.5rem;
+  }
+  .main .text a {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    font-size: 0.8rem;
+  }
+  .main .text a:hover {
+    background-color: white;
+    color: hsl(256, 26%, 20%);
+  }
+  .othermain {
+    background-color: white;
+    padding: 0 5vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 10rem;
+  }
+  .othermain .line {
+    width: 12rem;
+    height: 1px;
+    background-color: hsl(273, 4%, 51%);
+    margin-bottom: 2rem;
+  }
+  .othermain h2 {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+  }
+  .othermain img {
+    width: 4rem;
+  }
+  .othermain .grid {
+    display: grid;
+    grid-template-columns: 90vw;
+    align-items: center;
+    gap: 4rem;
+    text-align: center;
+  }
+  .second {
+    width: 90vw;
+    background-color: hsl(256, 26%, 20%);
+    margin: auto;
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 8rem;
+    background-image: url(./images/bg-pattern-how-we-work-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: left 100% center;
+    text-align: center;
+    padding: 3rem 2rem;
+  }
+  .second h2 {
+    font-size: 2rem;
+    color: white;
+    line-height: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .second a {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    font-size: 0.8rem;
+  }
+  .second a:hover {
+    background-color: white;
+    color: hsl(256, 26%, 20%);
+  }
+}
+@media (max-width: 1440px) and (min-width: 1025px) and (orientation: landscape) {
+  header {
+    background-color: white;
+    padding: 0 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+  }
+  header ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header ul li {
+    display: inline-block;
+    font-size: 1rem;
+  }
+  .main {
+    margin: auto;
+    display: flex;
+    gap: 3rem;
+    padding: 3rem 10vw 0 10vw;
+    background-color: hsl(256, 26%, 20%);
+    height: 40rem;
+    background-image: url(./images/bg-pattern-intro-right-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left 100% center;
+  }
+  footer .ftop {
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8rem;
+    border-bottom: 1px solid hsl(273, 4%, 51%);
+  }
+  footer .fbottom {
+    display: flex;
+    width: 80vw;
+    margin: auto;
+    height: 15rem;
+  }
+}
+@media (max-width: 1024px) and (min-width: 768px) and (orientation: landscape) {
+  header {
+    background-color: white;
+    padding: 0 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+  }
+  header ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header ul li {
+    display: inline-block;
+    font-size: 0.9rem;
+  }
+  .main {
+    margin: auto;
+    display: flex;
+    gap: 3rem;
+    padding: 3rem 10vw 0 10vw;
+    background-color: hsl(256, 26%, 20%);
+    height: 40rem;
+    background-image: url(./images/bg-pattern-intro-right-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left 100% center;
+  }
+  footer .ftop {
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8rem;
+    border-bottom: 1px solid hsl(273, 4%, 51%);
+  }
+  footer .fbottom {
+    display: flex;
+    width: 80vw;
+    margin: auto;
+    height: 15rem;
+  }
+}
+@media (max-width: 767px) and (orientation: landscape) {
+  header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 5rem;
+  }
+  #dropdown {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: calc(110vh - 5rem);
+    top: 5rem;
+    left: 0;
+    background-color: hsl(270, 9%, 17%);
+    background-image: url(./images/bg-pattern-mobile-nav.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top 120%;
+  }
+}
